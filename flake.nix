@@ -17,7 +17,7 @@
 	devShells.default = pkgs.mkShell {
 	  nativeBuildInputs =  
 	    let
-	      inherit (pkgs) ghc stdenv cowsay;
+	      inherit (pkgs) ghc stdenv cabal-install;
 	      ghc_stdenv = stdenv.override {
 		targetPlatform = stdenv.targetPlatform // {
 		  config = "javascript-unknown-ghcjs";
@@ -30,6 +30,8 @@
 	      ghc_js = ghc.override { stdenv = ghc_stdenv; };
 	    in [
 	      ghc_js
+	      ghc
+	      cabal-install
 	    ];
 	};
       };

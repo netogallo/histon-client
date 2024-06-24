@@ -1,0 +1,4 @@
+with-compiler: javascript-unknown-ghcjs-ghc
+with-hc-pkg: javascript-unknown-ghcjs-ghc-pkg
+packages:
+  histon-client-main/histon-client-main.cabal
