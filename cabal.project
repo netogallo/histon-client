@@ -2,3 +2,18 @@ with-compiler: javascript-unknown-ghcjs-ghc
 with-hc-pkg: javascript-unknown-ghcjs-ghc-pkg
 packages:
   histon-client-main/histon-client-main.cabal
+  dependencies/reflex-dom/reflex-dom/
+  dependencies/reflex-dom/reflex-dom-core/
+  dependencies/reflex
+
+package reflex
+  flags: -use-template-haskell
+
+package reflex-dom-core
+  flags: -use-template-haskell -hydration-tests -gc-tests
+
+allow-newer:
+  patch:base
+  , reflex-dom:base
+
+

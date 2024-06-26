@@ -17,7 +17,7 @@
 	devShells.default = pkgs.mkShell {
 	  nativeBuildInputs =  
 	    let
-	      inherit (pkgs) ghc stdenv cabal-install;
+	      inherit (pkgs) haskell ghc stdenv cabal-install haskellPackages happy;
 	      ghc_stdenv = stdenv.override {
 		targetPlatform = stdenv.targetPlatform // {
 		  config = "javascript-unknown-ghcjs";
@@ -27,11 +27,15 @@
 		  isJavaScript = true;
 		};
 	      };
-	      ghc_js = ghc.override { stdenv = ghc_stdenv; };
+	      ghc_js = haskell.compiler.ghc981.override { stdenv = ghc_stdenv; };
 	    in [
 	      ghc_js
 	      ghc
 	      cabal-install
+	      haskellPackages.happy
+	      haskellPackages.alex
+	      haskellPackages.cpphs
+	      haskellPackages.cabal-plan
 	    ];
 	};
       };

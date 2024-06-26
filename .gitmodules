@@ -1,0 +1,6 @@
+[submodule "dependencies/reflex-dom"]
+	path = dependencies/reflex-dom
+	url = https://github.com/netogallo/reflex-dom.git
+[submodule "dependencies/reflex"]
+	path = dependencies/reflex
+	url = https://github.com/netogallo/reflex.git

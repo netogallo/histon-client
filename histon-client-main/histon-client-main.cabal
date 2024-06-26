@@ -21,6 +21,6 @@ executable histon-client-main
     main-is:          Main.hs
     -- other-modules:
     -- other-extensions:
-    build-depends:    base ^>=4.18.2.1
+    build-depends:    base > 4.15 && < 4.20
     hs-source-dirs:   app
     default-language: Haskell2010
