@@ -8,7 +8,7 @@ license-file:       LICENSE
 author:             netogallo
 maintainer:         connect@netowork.me
 -- copyright:
-category:           BIO
+category:           Bio
 build-type:         Simple
 extra-doc-files:    CHANGELOG.md
 -- extra-source-files:
